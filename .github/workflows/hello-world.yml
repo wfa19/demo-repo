@@ -1,4 +1,4 @@
-name: Hello World Workflow
+name: Use Secrets in Workflow
 
 on:
   push:
@@ -9,5 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Print Hello World
-      run: echo "Hello World!"
+    - name: Print a Secret
+      run: | 
+       echo "The API key is: $API_KEY"
+
+      
